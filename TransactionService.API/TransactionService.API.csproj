@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Elio.HealthCheck" Version="1.0.1" />
+        <PackageReference Include="Elio.Logging" Version="1.0.2" />
+        <PackageReference Include="Keycloak.Net.Core" Version="1.0.28" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\TransactionService.Application\TransactionService.Application.csproj" />
+      <ProjectReference Include="..\TransactionService.Domain\TransactionService.Domain.csproj" />
+      <ProjectReference Include="..\TransactionService.Infrastructure\TransactionService.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>

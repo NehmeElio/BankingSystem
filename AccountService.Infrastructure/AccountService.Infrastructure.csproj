@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Flurl" Version="4.0.0" />
+      <PackageReference Include="Google.Protobuf" Version="3.27.3" />
+      <PackageReference Include="Grpc.Net.Client" Version="2.65.0" />
+      <PackageReference Include="Grpc.Tools" Version="2.66.0">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Keycloak.AuthServices.Common" Version="2.5.3" />
+      <PackageReference Include="Keycloak.AuthServices.Sdk" Version="2.5.3" />
+      <PackageReference Include="Keycloak.Net.Core" Version="1.0.28" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
+      <PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\AccountService.Domain\AccountService.Domain.csproj" />
+      <ProjectReference Include="..\AccountService.Persistence\AccountService.Persistence.csproj" />
+      <ProjectReference Include="..\BankingSystem.SharedLibrary\BankingSystem.SharedLibrary.csproj" />
+      <Protobuf Include="protos/accountcreation.proto" GrpcServices="Client" />
+    </ItemGroup>
+
+</Project>

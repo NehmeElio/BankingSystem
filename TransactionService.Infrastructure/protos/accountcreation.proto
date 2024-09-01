@@ -1,0 +1,48 @@
+﻿syntax="proto3";
+
+service AccountCreation{
+  rpc CreateAccount(CreateAccountRequest) returns (CreateAccountResponse);
+  rpc CreateCustomer(CreateCustomerRequest) returns (CreateCustomerResponse);
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
+
+}
+
+
+
+message CreateAccountRequest{
+  string FirstName=1;
+  string LastName=2;
+  double Balance=3;
+  string Username=4;
+  string Email=5;
+  string Branch=6;
+}
+
+message CreateAccountResponse{
+  bool IsSuccess=1;
+}
+
+message CreateCustomerRequest{
+  string FirstName=1;
+  string LastName=2;
+  int32 NumberOfAccounts=3;
+  string Branch=4;
+}
+
+message CreateCustomerResponse{
+  bool IsSuccess=1;
+}
+
+message CreateUserRequest{
+  string FirstName=1;
+  string LastName=2;
+  string Username=3;
+  string Email=4;
+  string Role=5;
+  string Branch=6;
+}
+
+message CreateUserResponse{
+  bool IsSuccess=1;
+
+}
