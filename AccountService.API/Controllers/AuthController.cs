@@ -19,7 +19,7 @@ public class AuthController(ITokenService tokenService, BankContext context) : C
 
 
     
-    [HttpGet]
+    [HttpGet("Login")]
     public async Task<IActionResult> GetToken( string username, string password) 
     {
         var token = await tokenService.GetTokenAsync(username,password);

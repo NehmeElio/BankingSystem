@@ -2,12 +2,14 @@
 using AccountService.Application.Commands;
 using BankingSystem.SharedLibrary.DTO;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AccountService.API.Controllers;
 
 [ApiController]
 [Route("[controller]")]
+[Authorize(policy: "RequireAdminRole")]
 public class BranchController:ControllerBase
 {
     
